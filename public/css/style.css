@@ -29,3 +29,325 @@ h1 {
 .font-weight-bold {
   color: #888787;
 }
+
+.submit-btn {
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background-color: #f18f55;
+  border: none;
+  transition: background-color 0.5s, color 0.75s;
+}
+
+.submit-btn:hover {
+  color: white;
+  background-color: #ce7d4f;
+}
+
+/* login page styles */
+
+.form-container {
+  /*background-color: #f1f1f1;*/
+  font-size: 1.25rem;
+  width: 35%;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 50px auto;
+  box-shadow: 2px 2px 3px #888787;
+}
+
+.form-container label {
+  /* font-weight: bold;*/
+  float: left !important;
+}
+
+.input-form {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+
+.login-form {
+  border-bottom: 1px lightgray solid;
+}
+
+/* vote page styles*/
+body {
+  margin-top: 20px;
+  text-align: center;
+  display: inline;
+  background-color: beige;
+}
+
+/****************************************************************************************/
+/* mobile responsiveness for create event page */
+@media screen and (max-width: 2560px) {
+  .ce-hero {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #event-input,
+  #invitee-email {
+    width: 60%;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .m-0 {
+    font-size: 25px;
+  }
+
+  .em-instr {
+    font-size: 25px;
+  }
+  .h3-hdr {
+    font-size: 38px;
+  }
+  .hp-ft {
+    width: 75%;
+    height: 700px;
+  }
+
+  .create-event {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1385px) {
+  .ce-hero {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #event-input,
+  #invitee-email {
+    width: 75%;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .m-0 {
+    font-size: 25px;
+  }
+
+  .em-instr {
+    font-size: 25px;
+  }
+  .h3-hdr {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  .w-35,
+  .happy-penguin {
+    width: 75%;
+    margin-top: 5px;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+  }
+
+  .ce-hero {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #event-input,
+  #invitee-email {
+    width: 75%;
+    height: 40px;
+    border-radius: 15px;
+  }
+
+  .m-0 {
+    font-size: 22px;
+  }
+  .h3-hdr {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .w-35,
+  .happy-penguin {
+    width: 75%;
+    margin-top: 5px;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+  }
+
+  .ce-hero {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #event-input,
+  #invitee-email {
+    width: 75%;
+    height: 40px;
+    border-radius: 15px;
+  }
+
+  .m-0 {
+    font-size: 22px;
+  }
+
+  .h3-hdr {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .w-35 {
+    width: 100%;
+    height: 400px;
+    margin-top: 5px;
+    border-radius: 15x;
+  }
+
+  .happy-penguin {
+    width: 70%;
+  }
+
+  .m-0 {
+    font-size: 20px;
+  }
+
+  #event-input,
+  #invitee-email {
+    width: 75%;
+    height: 40px;
+    border-radius: 15px;
+  }
+
+  .h3-hdr {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .w-35 {
+    width: 100%;
+    margin-top: 5px;
+    height: 300px;
+    border-radius: 15px;
+  }
+
+  .create-event {
+    width: 100%;
+    font-size: 28px;
+  }
+
+  #event-input,
+  #invitee-email {
+    width: 75%;
+    height: 40px;
+    border-radius: 15px;
+  }
+
+  .m-0 {
+    font-size: 17px;
+    font-weight: 100;
+  }
+
+  .hp-ft {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .h3-hdr {
+    font-size: 28px;
+  }
+}
+
+/*************************************************************************************************************************************************/
+/* mobile responsiveness for test.html */
+@media screen and (max-width: 2560px) {
+  .form-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1385px) {
+  .form-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  .form-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .form-container {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    width: 75%;
+  }
+}
+
+/*************************************************************************************************************************************************/
+/* mobile responsiveness for vote page.html */
+@media screen and (max-width: 2560px) {
+  .text-right {
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 1385px) {
+  .text-right {
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  .text-right {
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .text-right {
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-right {
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-right {
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+  }
+}
