@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GP Penguin!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="p-4 text-left header-top mb-5"></header>
+    <h1 class="logo_new">Lumivent</h1>
+    <section
+      class="d-flex justify-content-center align-items-center w-100 main-content"
+    >
+      <div class="d-flex flex-wrap form-container card">
+        <form class="w-100 pb-4 login-form">
+          <h3 class="font-weight-bold text-center bd-content-title">Login</h3>
+
+          <div class="form-group row w-100">
+            <div class="col-sm-3">
+              <label for="email-login">Email</label>
+            </div>
+            <input type="text" id="email-login" class="col-sm-9 form-control" />
+          </div>
+          <div class="form-group row w-100">
+            <div class="col-sm-3">
+              <label for="password-login">Password</label>
+            </div>
+            <input
+              type="password"
+              id="password-login"
+              class="col-sm-9 form-control"
+            />
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12 d-flex justify-content-center">
+              <button type="submit" class="w-50 mt-3 submit-btn">Login</button>
+            </div>
+          </div>
+        </form>
+
+        <form class="w-100 mt-4 signup-form">
+          <h3 class="font-weight-bold text-center">Create An Account</h3>
+          <div class="form-group row w-100">
+            <div class="col-sm-3">
+              <label for="username-signup">Name</label>
+            </div>
+            <input
+              type="text"
+              id="username-signup"
+              class="col-sm-9 input-form form-control"
+            />
+          </div>
+          <div class="form-group row w-100">
+            <div class="col-sm-3">
+              <label for="email-signup">Email</label>
+            </div>
+            <input
+              type="email"
+              id="email-signup"
+              class="col-sm-9 input-form form-control"
+            />
+          </div>
+          <div class="form-group row w-100">
+            <div class="col-sm-3">
+              <label for="password-signup">Password</label>
+            </div>
+            <input
+              type="password"
+              id="password-signup"
+              class="col-sm-9 input-form form-control"
+            />
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="w-50 mt-3 submit-btn">
+              Create New Account
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
