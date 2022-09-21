@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create An Event</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <section class="p-5">
+            <div class="d-flex justify-content-between">
+                <h2 class="create-event">Create A New Event</h2>
+                <button id="logout-btn" class="font-weight-bold pl-3 pr-3">Logout</button>
+            </div>
+            <div class="ce-hero">
+                <img class="w-35" src="" alt="">
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <form id="event-form" class="w-100">
+                    <div class="mt-5">
+                        <h3 class="h3-hdr">Event Name</h3>
+                        <input type="text" class="pb-1 pt-1" id="event-input">
+                    </div> 
+                        <div class="mt-5">
+                        <h3 class="h3-hdr">Choose Days</h3>
+                        <div>
+                            <input type="checkbox" id="saturday" value="saturday">
+                            <label for="saturday" class="m-0 font-weight-bold">saturday</label>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="h3-hdr">Enter Invitee Emails</h3>
+                        <p class="em-instr">Enter the emails of the people you would like to invite to the event.
+                            <br>*Emails must be separated by a single space.</p>
+                        <input type="text" class="pb-1 pt-1 pl-2 pr-2" id="invitee-email">
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="pl-3 pr-3 pt-2 pb-2 mb-4" id="cr-btn">Create Event</button>
+                    </div>
+                </form>
+
+                <div class="w-100 d-flex justify-content-center mt-3 mb-3">
+                    <img src="" alt="" class="hp-ft">
+                </div>
+            </div>
+            
+        
+</section>
+</body>
+</html>
