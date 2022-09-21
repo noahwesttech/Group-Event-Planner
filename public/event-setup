@@ -8,21 +8,17 @@
     <title>Create An Event</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href=".\css\style.css">
 </head>
-
 <body>
     <section class="p-5">
-        
             <div class="d-flex justify-content-between">
                 <h2 class="create-event">Create A New Event</h2>
                 <button id="logout-btn" class="font-weight-bold pl-3 pr-3">Logout</button>
             </div>
-
             <div class="ce-hero">
                 <img class="w-35" src="" alt="">
             </div>
-
             <div class="d-flex flex-wrap justify-content-center">
                 <form id="event-form" class="w-100">
                     <div class="mt-5">
@@ -50,28 +46,9 @@
                 <div class="w-100 d-flex justify-content-center mt-3 mb-3">
                     <img src="" alt="" class="hp-ft">
                 </div>
-    
-                <div class="active-events-container">
-                    <div class="mt-4">
-                        <h2><u>Active Events</u></h2>
-                        <p class="mb-4">Click an active event to see the details.</p>
-                    </div>
-    
-                    
-                    <a href="">
-                        <article class="d-flex justify-content-center flex-wrap p-3 event-item align-items-center w-100 mb-4">
-                            <div class="text-primary w-100">
-                                <h3 class="m-0 h3-hdr">Title</h3>
-                            </div>
-                        </article>
-                    </a>   
-                </div>
             </div>
             
         
 </section>
-
-
 </body>
-
 </html>
