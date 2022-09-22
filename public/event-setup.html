@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create An Event</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
     <section class="p-5">
@@ -21,14 +23,11 @@
                 <form id="event-form" class="w-100">
                     <div class="mt-5">
                         <h3 class="h3-hdr">Event Name</h3>
-                        <input type="text" class="pb-1 pt-1" id="event-input">
-                    </div> 
-                        <div class="mt-5">
-                        <h3 class="h3-hdr">Choose Days</h3>
-                        <div>
-                            <input type="checkbox" id="saturday" value="saturday">
-                            <label for="saturday" class="m-0 font-weight-bold">saturday</label>
-                        </div>
+                        <input type="text" class="pb-1 pt-1" id="event-name">
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="h3-hdr">Event Location</h3>
+                        <input type="text" class="pb-1 pt-1" id="event-location">
                     </div>
                     <div class="mt-5">
                         <h3 class="h3-hdr">Enter Invitee Emails</h3>
