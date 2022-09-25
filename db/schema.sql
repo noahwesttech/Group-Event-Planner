@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS lumivent_db;
+CREATE DATABASE lumivent_db;
