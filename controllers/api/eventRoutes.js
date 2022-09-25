@@ -78,6 +78,8 @@ router.put('/:id',  async (req, res) => {
   }
 });
 
+// creates new event
+// this is where we'll probably need to add the email function
 router.post('/', async (req, res) => {
   try {
     const newEvent = await Event.create({
