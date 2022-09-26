@@ -60,8 +60,6 @@ button {
 }
 
 .form-container {
-  /*background-color: #f1f1f1;*/
-  font-size: 1.25rem;
   width: 35%;
   border-radius: 15px;
   padding: 25px;
@@ -70,7 +68,7 @@ button {
 }
 
 .form-container label {
-  /* font-weight: bold;*/
+  font-weight: bold;
   float: left !important;
 }
 
