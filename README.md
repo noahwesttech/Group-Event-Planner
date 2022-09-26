@@ -1,8 +1,5 @@
-
-# Group-Event-Planner
-# MADE WITH LOVE - KEVIN RIVERA 
+# Lumivent Presents:
 =======
-# Lumivent
 # Group-Event-Planner
 
 ## User Story
