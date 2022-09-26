@@ -35,8 +35,9 @@ router.post('/:eventId', async (req, res) => {
   try {
     const newItem = await Item.create({
       ...req.body,
-      user_id: req.session.user_id,
-      post_id: req.params.postId,
+      // user_id: req.session.user_id,
+      user_id: req.body.user_id,
+      event_id: req.params.eventId,
     });
     // console.log(req.body);
     res.status(200).json(newItem);
@@ -51,7 +52,7 @@ router.delete('/:id', async (req, res) => {
     const itemData = await Item.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        // user_id: req.session.user_id,
       },
     });
 
