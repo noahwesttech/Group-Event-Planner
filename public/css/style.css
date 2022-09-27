@@ -38,8 +38,8 @@ h1 {
 }
 
 button {
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   display: inline-flex;
 }
 
@@ -79,6 +79,62 @@ button {
 
 .login-form {
   border-bottom: 1px lightgray solid;
+}
+
+/*home page*/
+.event_box {
+  margin: 20px 0;
+  border: 1px lightgrey solid;
+  text-align: right;
+}
+
+.event-title {
+  background-color: lightgrey;
+  padding: 15px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.event-title a:link {
+  color: #617ab7;
+  text-decoration: none;
+}
+
+.event-title a:visited {
+  color: #617ab7;
+  text-decoration: none;
+}
+
+.event-title a:hover {
+  text-decoration: none;
+  color: #0e506e;
+}
+
+.event-content {
+  padding: 10px !important;
+  text-align: left !important;
+}
+
+.event-button {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.event-author {
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.event-username {
+  font-weight: bold;
+}
+
+.event-post {
+  border: 1px #d3d3d3 solid;
 }
 
 @media screen and (max-width: 1385px) {
