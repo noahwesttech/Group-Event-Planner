@@ -6,12 +6,14 @@
       >{{event_title}}</a></h4>
     <div class="event-body">
       <p class="event-content">
+        {{items.item_name}}
+      </p>
+      <p class="event-guest">
         Created by
         <span class="event-username">{{user.username}}</span>
         on
-        {{createdAt}}
+        {{format_date createdAt}}
       </p>
-      <p class="event-guest"></p>
     </div>
   </div>
 </div>
