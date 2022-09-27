@@ -26,7 +26,12 @@ Event.init(
     invite_emails: {
       type: DataTypes.STRING,
       allowNull: false,
-      // might need get/set functions here for formatting
+      get() {
+        return this.getDataValue("invite_emails").split(";");
+      },
+      set(val) {
+        this.setDataValue("invite_emails", val.join(";"));
+      },
     },
   },
   {
