@@ -7,30 +7,32 @@ body {
   text-align: center;
   display: inline;
   background-color: beige;
+  margin: auto;
 }
 
+main {
+  padding: 30px;
+}
 .header-top {
-  -webkit-box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, 0.67);
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.67);
   position: relative;
   z-index: 3;
   background-size: cover;
   background-image: url("../images/event.jpg");
   height: 200px;
-}
-
-.header-title {
-  text-shadow: 1px 1px 20px rgb(131, 131, 131);
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.67);
+  box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.67);
 }
 
 h1 {
-  font-size: 3.25rem;
+  font-size: 40px;
 }
 
 .logo_new {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-shadow: 1px 1px 3px #888787;
   color: #f18f55;
+  margin: 20px auto;
 }
 
 .font-weight-bold {
@@ -38,8 +40,8 @@ h1 {
 }
 
 button {
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   display: inline-flex;
 }
 
@@ -52,6 +54,7 @@ button {
   background-color: #f18f55;
   border: none;
   transition: background-color 0.5s, color 0.75s;
+  justify-content: center;
 }
 
 .submit-btn:hover {
@@ -79,6 +82,80 @@ button {
 
 .login-form {
   border-bottom: 1px lightgray solid;
+}
+
+/*home page*/
+.main_body {
+  padding: 100px 50px;
+  position: relative;
+  top: -119px;
+  z-index: -100;
+  width: 90%;
+  margin: auto;
+}
+.event_box {
+  margin: 20px 0;
+  border: 1px lightgrey solid;
+  text-align: right;
+}
+
+.event-title {
+  background-color: lightgrey;
+  padding: 15px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.event-title a:link {
+  color: #617ab7;
+  text-decoration: none;
+}
+
+.event-title a:visited {
+  color: #617ab7;
+  text-decoration: none;
+}
+
+.event-title a:hover {
+  text-decoration: none;
+  color: #0e506e;
+}
+
+.event-content {
+  padding: 10px !important;
+  text-align: left !important;
+}
+
+.event-button {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.event-author {
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.event-username {
+  font-weight: bold;
+}
+
+.event-post {
+  border: 1px #d3d3d3 solid;
+}
+
+footer {
+  width: 100%;
+  background-color: lightgrey;
+  border-top: 1px solid #acaaaa;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
 }
 
 @media screen and (max-width: 1385px) {
