@@ -3,7 +3,6 @@
 }
 
 body {
-  margin-top: 20px;
   text-align: center;
   display: inline;
   background-color: beige;
@@ -88,7 +87,7 @@ button {
 .main_body {
   padding: 100px 50px;
   position: relative;
-  top: -119px;
+  top: -120px;
   z-index: -100;
   width: 90%;
   margin: auto;
