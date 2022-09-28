@@ -20,10 +20,10 @@ router.get("/", async (req, res) => {
     // Serialize data so the template can read it
     const events = eventData.map((event) => event.get({ plain: true }));
 
-    res.status(200).json(events);
+    // res.status(200).json(events);
     res.render("home", {
       events,
-      logged_in: req.session.logged_in,
+      // logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
