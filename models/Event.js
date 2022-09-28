@@ -15,6 +15,14 @@ Event.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    event_location: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    event_description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
