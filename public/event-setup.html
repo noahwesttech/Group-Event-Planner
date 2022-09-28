@@ -11,11 +11,29 @@
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
-    <header class="p-4 text-left header-top mb-5"></header>
-        <section class="p-5">
-            <div class="button">
-                <button id="logout-btn" class="font-weight-bold pl-3 pr-3">Logout</button>
-            </div>
+    <header class="p-4 text-left header-top"></header>
+    
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Lumivent</a>
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Home</a>
+                        <a class="dropdown-item" href="#">New Event</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <a href="#">
+                  <button class="nav-item btn jusstify-content-end">Logout</button>
+                  </a>
+                </div>
+              </nav>
+              
             <div class="ce-hero">
                 <img class="w-35" src="" alt="">
             </div>
@@ -44,7 +62,6 @@
                     <img src="" alt="" class="hp-ft">
                 </div>
             </div>
-        </section>
         <script src="./js/setup.js"></script>
     </body>
 </html>
