@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lumivent</title>
@@ -11,7 +11,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header class="p-4 text-left header-top"></header>
@@ -31,19 +31,19 @@
           </ul>
         {{#if logged_in}}
         <a href="#">
-          <button class="nav-item btn jusstify-content-end" id="logout">Logout</button>
+          <button class="nav-item btn justify-content-end" id="logout">Logout</button>
         </a>
         {{else}}
           <a href="/login">
-          <button class="nav-item btn jusstify-content-end">Login</button>
+          <button class="nav-item btn justify-content-end">Login</button>
         </a>
         {{/if}}
       </nav>
 
     <div class="logo_new"><h1>Lumivent</h1></div>
-
+    {{!-- <main> --}}
     {{{body}}}
-
+    {{!-- </main> --}}
     <footer>© 2022 SQL Injectors</footer>
 
     <script

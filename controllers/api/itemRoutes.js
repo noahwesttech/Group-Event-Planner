@@ -7,9 +7,33 @@ const withAuth = require('../../utils/auth');
 // will need to add withAuth to routes after testing is done
 
 // gets item by id
-router.get('/:id', withAuth, async (req, res) => {
+// router.get('/:id', withAuth, async (req, res) => {
+//   try {
+//     const itemData = await Item.findByPk(req.params.id, {
+//       include: [
+//         {
+//             model: User,
+//             attributes: ['username', 'id'],
+//         },
+//       ],
+//     });
+
+//     const items = itemData.get({ plain: true });
+//     res.status(200).json(itemData);
+
+//     // res.render('item', {
+//     //   ...items,
+//     //   logged_in: req.session.logged_in,
+//     // });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+// add-item endpoint
+router.get('/:eventId', withAuth, async (req, res) => {
   try {
-    const itemData = await Item.findByPk(req.params.id, {
+    const eventData = await Event.findByPk(req.params.eventId, {
       include: [
         {
             model: User,
@@ -18,13 +42,14 @@ router.get('/:id', withAuth, async (req, res) => {
       ],
     });
 
-    const items = itemData.get({ plain: true });
-    res.status(200).json(itemData);
+    const event = eventData.get({ plain: true });
+    // res.status(200).json(itemData);
 
-    // res.render('item', {
-    //   ...items,
-    //   logged_in: req.session.logged_in,
-    // });
+    res.render('add-item', {
+      ...event,
+      event_id: req.params.eventId,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -34,9 +59,9 @@ router.get('/:id', withAuth, async (req, res) => {
 router.post('/:eventId', withAuth, async (req, res) => {
   try {
     const newItem = await Item.create({
-      ...req.body,
+      item_name: req.body.item,
       user_id: req.session.user_id,
-      user_id: req.body.user_id,
+      // user_id: req.body.user_id,
       event_id: req.params.eventId,
     });
     // console.log(req.body);

@@ -218,6 +218,10 @@ footer {
   }
 }
 
+.nav-item {
+  margin: 1rem;
+}
+
 @media screen and (max-width: 600px) {
   .w-35 {
     width: 100%;
