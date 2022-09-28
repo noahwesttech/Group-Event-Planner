@@ -1,9 +1,9 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const item = document.querySelector('input[name="content"]').value;
+  const item = document.querySelector('input[name="item_text"]').value;
 
-  const response = await fetch(`/api/item`, {
+  const response = await fetch(`/api/event`, {
     method: "POST",
     body: JSON.stringify({
       item,
