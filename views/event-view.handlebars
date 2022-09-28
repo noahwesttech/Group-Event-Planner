@@ -1,7 +1,7 @@
 <div class="event_post">
   <h4 class="event-title"><a
       class="link"
-      href="/event/{{id}}"
+      href="/api/event/{{id}}"
     >{{event_title}}</a></h4>
   <div class="event-body">
     <p class="event-content">
@@ -9,25 +9,26 @@
         <span class="event-username">{{user.username}}</span>
         on
         {{format_date createdAt}}
-      </p>
+      
     </p>
-    {{#each this}}
+    {{#each items as |item|}}
       <div class="item_list">
         <div class="card-text item-text">
-          {{items.item_name}}
+          {{item.item_name}}
         </div>
         <div class="item-author">
-          -{{user.username}}
+          -{{item.user.username}}
         </div>
       </div>
     {{/each}}
     <div class="row">
         <div class="col-sm-12 d-flex justify-content-center">
-          <button type="submit" class="mt-3 submit-btn">
+          <button type="submit" class="mt-3 submit-btn" data-id={{id}}>
             <!-- Add path after edit rout file -->
-            <a class="link" href="/event/">+ new item</a>
+            <a class="link" href="/api/item/{{id}}">+ new item</a>
           </button>
         </div>
       </div>
   </div>
 </div>
+<script src="../public/js/add-item.js"></script>

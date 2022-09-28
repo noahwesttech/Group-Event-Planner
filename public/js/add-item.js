@@ -1,23 +1,29 @@
-async function newFormHandler(event) {
+const newFormHandler = async (event) => {
   event.preventDefault();
 
   const item = document.querySelector('input[name="item_text"]').value;
 
-  const response = await fetch(`/api/event`, {
-    method: "POST",
-    body: JSON.stringify({
-      item,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  if (event.target.hasAttribute("data-id")) {
+    const id = event.target.getAttribute("data-id");
+    const response = await fetch(`/api/item/${id}`, {
+      method: "POST",
+      body: JSON.stringify({
+        item,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-  if (response.ok) {
-    document.location.replace("/home");
+    if (response.ok) {
+      document.location.replace(`/api/event/${id}`);
+    } else {
+      alert(response.statusText);
+    }
   } else {
-    alert(response.statusText);
+    console.log('No data-id');
   }
+
 }
 
 document
