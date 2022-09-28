@@ -11,8 +11,17 @@
         {{format_date createdAt}}
       </p>
     </p>
-    {{!-- <p class="event-guest">
-
-    </p> --}}
+    {{#each this}}
+      <div class="item_list">
+        <div class="card-text item-text">
+          {{items.item_name}}
+        </div>
+        <div class="item-author">
+          -{{user.username}},
+          {{format_date createdAt}}
+        </div>
+      </div>
+    {{/each}}
+   
   </div>
 </div>
