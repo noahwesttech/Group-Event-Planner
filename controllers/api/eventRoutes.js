@@ -4,10 +4,8 @@ const withAuth = require('../../utils/auth');
 
 // /api/event/ routes
 
-// might need to add withAuth after testing
-
 // gets all events
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const eventData = await Event.findAll({
       include: [
@@ -22,17 +20,17 @@ router.get('/', async (req, res) => {
     const events = eventData.map((event) => event.get({ plain: true }));
 
     res.status(200).json(events);
-    // res.render('homepage', {
-    //   events,
-    //   logged_in: req.session.logged_in,
-    // });
+    res.render('homepage', {
+      events,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // gets event by id
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
         const eventData = await Event.findByPk(req.params.id, {
             include: [
@@ -53,12 +51,12 @@ router.get('/:id', async (req, res) => {
 
         const event = eventData.get({ plain: true });
 
-    //     res.render('event', {
-    //     ...event,
-    //     id: req.params.id,
-    //     logged_in: req.session.logged_in,
-    //     user_id: req.session.user_id,
-    // });
+        res.render('event', {
+        ...event,
+        id: req.params.id,
+        logged_in: req.session.logged_in,
+        user_id: req.session.user_id,
+    });
         res.status(200).json(eventData);
     } catch (err) {
         res.status(500).json(err);
@@ -66,7 +64,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // updates an event
-router.put('/:id',  async (req, res) => {
+router.put('/:id',  withAuth, async (req, res) => {
   try {
     const updatedEvent = await Event.update(
       { event_title: req.body.event_title },
@@ -80,13 +78,13 @@ router.put('/:id',  async (req, res) => {
 
 // creates new event
 // this is where we'll probably need to add the email function
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const eventEmails = req.body.invite_emails;
     
     const newEvent = await Event.create({
-      // ...req.body,
-      // user_id: req.session.user_id,
+      ...req.body,
+      user_id: req.session.user_id,
       user_id: req.body.user_id,
       event_title: req.body.event_title,
       invite_emails: eventEmails,
@@ -99,7 +97,7 @@ router.post('/', async (req, res) => {
 });
 
 // deletes an event
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const eventData = await Event.destroy({
       where: {
