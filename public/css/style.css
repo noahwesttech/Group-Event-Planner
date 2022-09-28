@@ -66,7 +66,7 @@ button {
   border-radius: 15px;
   padding: 25px;
   margin: 50px auto;
-  box-shadow: 2px 2px 3px #888787;
+  box-shadow: 2px 2px 3px 3px #888787;
 }
 
 .form-container label {
@@ -95,7 +95,7 @@ button {
 .event_box {
   margin: 20px 0;
   border: 1px lightgrey solid;
-  text-align: right;
+  text-align: left;
 }
 
 .event-title {
@@ -132,7 +132,7 @@ button {
   margin-bottom: 20px;
 }
 
-.event-author {
+.event-guest {
   text-align: right;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -145,6 +145,36 @@ button {
 
 .event-post {
   border: 1px #d3d3d3 solid;
+}
+
+/*single event*/
+
+.item-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px #d3d3d3 solid;
+  border-radius: 10px;
+}
+
+.item-button {
+  margin-top: 20px;
+}
+
+.item-text {
+  padding: 10px;
+  float: left;
+}
+
+.item-author {
+  padding: 14px;
+  font-weight: bold;
+  float: left;
+  font-size: 12px;
+}
+
+.item_list {
+  width: 100%;
+  float: left;
 }
 
 footer {
