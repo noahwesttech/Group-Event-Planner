@@ -40,7 +40,7 @@ router.get('/my-events', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('dashboard', {
+    res.render('my-events', {
       ...user,
       logged_in: true,
       myEvents: true,

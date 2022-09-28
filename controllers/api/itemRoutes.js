@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 // will need to add withAuth to routes after testing is done
 
 // gets item by id
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const itemData = await Item.findByPk(req.params.id, {
       include: [
@@ -31,11 +31,11 @@ router.get('/:id', async (req, res) => {
 });
 
 // creates new item
-router.post('/:eventId', async (req, res) => {
+router.post('/:eventId', withAuth, async (req, res) => {
   try {
     const newItem = await Item.create({
       ...req.body,
-      // user_id: req.session.user_id,
+      user_id: req.session.user_id,
       user_id: req.body.user_id,
       event_id: req.params.eventId,
     });
@@ -47,12 +47,12 @@ router.post('/:eventId', async (req, res) => {
 });
 
 // deletes an item
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const itemData = await Item.destroy({
       where: {
         id: req.params.id,
-        // user_id: req.session.user_id,
+        user_id: req.session.user_id,
       },
     });
 
