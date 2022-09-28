@@ -1,17 +1,14 @@
-const editFormHandler = async (event) => {
+const deleteFormHandler = async (event) => {
   event.preventDefault();
-
-  const item = document.querySelector('input[name="item_text"]').value.trim();
 
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
 
   const response = await fetch(`/api/item/${id}`, {
-    method: "PUT",
+    method: "DELETE",
     body: JSON.stringify({
       event_id: id,
-      item,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -26,5 +23,5 @@ const editFormHandler = async (event) => {
 };
 
 document
-  .querySelector(".form-container")
-  .addEventListener("submit", editFormHandler);
+  .querySelector(".delete-btn")
+  .addEventListener("click", deleteFormHandler);
