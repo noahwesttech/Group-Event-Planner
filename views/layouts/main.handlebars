@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,9 +29,15 @@
               <a class="navlink active" href="#">Your Events</a>
             </li>
           </ul>
-        <a href="/login">
+        {{#if logged_in}}
+        <a href="#">
+          <button class="nav-item btn jusstify-content-end" id="logout">Logout</button>
+        </a>
+        {{else}}
+          <a href="/login">
           <button class="nav-item btn jusstify-content-end">Login</button>
         </a>
+        {{/if}}
       </nav>
 
     <div class="logo_new"><h1>Lumivent</h1></div>
@@ -47,5 +54,8 @@
       integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
       crossorigin="anonymous"
     ></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
