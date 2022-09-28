@@ -1,9 +1,9 @@
-async function newFormHandler(event) {
+const newFormHandler = async (event) => {
   event.preventDefault();
 
   const item = document.querySelector('input[name="item_text"]').value;
 
-  const response = await fetch(`/api/event`, {
+  const response = await fetch(`/api/item`, {
     method: "POST",
     body: JSON.stringify({
       item,
@@ -18,7 +18,7 @@ async function newFormHandler(event) {
   } else {
     alert(response.statusText);
   }
-}
+};
 
 document
   .querySelector(".form-container")

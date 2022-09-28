@@ -1,4 +1,4 @@
-async function editFormHandler(event) {
+const editFormHandler = async (event) => {
   event.preventDefault();
 
   const item = document.querySelector('input[name="item_text"]').value.trim();
@@ -7,7 +7,7 @@ async function editFormHandler(event) {
     window.location.toString().split("/").length - 1
   ];
 
-  const response = await fetch(`/api/event/${id}`, {
+  const response = await fetch(`/api/item/${id}`, {
     method: "PUT",
     body: JSON.stringify({
       event_id: id,
@@ -23,7 +23,7 @@ async function editFormHandler(event) {
   } else {
     alert(response.statusText);
   }
-}
+};
 
 document
   .querySelector(".form-container")
