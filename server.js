@@ -40,5 +40,5 @@ app.use(require("./controllers"));
 
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening at https://localhost:3001"));
+  app.listen(PORT, () => console.log("Now listening at http://localhost:3001"));
 });
