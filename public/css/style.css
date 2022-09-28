@@ -177,6 +177,11 @@ button {
   float: left;
 }
 
+.delete-btn {
+  background-color: rgb(212, 50, 50);
+  color: white;
+}
+
 footer {
   width: 100%;
   background-color: lightgrey;
