@@ -5,6 +5,9 @@ const newEventFormHandler = async (event) => {
   const date = document.querySelector("#event-date").value.trim();
   const location = document.querySelector("#event-location").value.trim();
 
+  const description = document.querySelector("#event-desc").value.trim();
+
+
   const inviteEmailsAsString = document
     .querySelector("#invite-email")
     .value.trim();
@@ -22,9 +25,11 @@ const newEventFormHandler = async (event) => {
     const response = await fetch("/api/events", {
       method: "post",
       body: JSON.stringify({
-        title: title,
-        location: location,
-        date: date,
+
+        event_title: title,
+        event_location: location,
+        event_date: date,
+        event_description: description,
         invite_emails: inviteEmailsAsArray,
       }),
       headers: { "Content-Type": "application/json" },

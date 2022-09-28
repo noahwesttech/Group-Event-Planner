@@ -218,13 +218,6 @@ footer {
     display: flex;
   }
 
-  #event-input,
-  #invitee-email {
-    width: 75%;
-    height: 50px;
-    border-radius: 15px;
-  }
-
   .m-0 {
     font-size: 25px;
   }
