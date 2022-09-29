@@ -75,6 +75,12 @@ button {
   color: white;
 }
 
+.submit-btn:focus-visible {
+  outline: -webkit-focus-ring-color auto 0;
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
+  outline-width: none;
+}
 .submit-btn:hover {
   color: white;
   background-color: #ce7d4f;
@@ -216,8 +222,9 @@ button {
 #del-btn {
   border: none;
   background-color: #f8880800;
-  padding-top: 1.5rem;
-  padding-left: 5rem;
+  float: right;
+  margin-right: -20px;
+  height: 10px;
 }
 
 .d-btn {
