@@ -21,6 +21,7 @@ Item.init(
                 model: "event",
                 key: "id",
             },
+            onDelete: 'CASCADE',
         },
         user_id: {
             type: DataTypes.INTEGER,
