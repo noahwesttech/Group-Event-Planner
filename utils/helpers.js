@@ -9,4 +9,9 @@ module.exports = {
       return true;
     }
   },
+  is_greater: (a) => {
+    if (a > 0) {
+      return true;
+    }
+  }
 };

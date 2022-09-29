@@ -41,7 +41,7 @@ router.get('/:id', withAuth, async (req, res) => {
                 },
                 {
                     model: Item,
-                    attributes: ['item_name', 'user_id'],
+                    attributes: ['item_name', 'user_id', 'id'],
                     include: {
                         model: User,
                         attributes: ['username', 'id'],
@@ -51,13 +51,15 @@ router.get('/:id', withAuth, async (req, res) => {
         });
 
         const event = eventData.get({ plain: true });
-
+        
         res.render('event-view', {
         ...event,
         id: req.params.id,
         logged_in: req.session.logged_in,
-        user_id: req.session.user_id,
+        userId: req.session.user_id,
+        items_length: eventData.items.length,
     });
+    
         // res.status(200).json(eventData);
     } catch (err) {
         res.status(500).json(err);
