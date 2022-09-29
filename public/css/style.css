@@ -139,8 +139,6 @@ button {
 
 .event-guest {
   text-align: right;
-  margin-right: 20px;
-  margin-bottom: 20px;
   font-style: italic;
 }
 
@@ -159,6 +157,11 @@ button {
   padding: 10px;
   border: 1px #d3d3d3 solid;
   border-radius: 10px;
+  background-color: #f888086b;
+}
+
+.item-list-container {
+  display: flex;
 }
 
 .item-button {
@@ -166,26 +169,42 @@ button {
 }
 
 .item-text {
-  padding: 10px;
+  padding: .5rem;
   float: left;
+  width:fit-content;
 }
 
 .item-author {
-  padding: 14px;
+  padding: .5rem;
   font-weight: bold;
   float: left;
   font-size: 12px;
+  width: fit-content;
+  padding-left: 1rem;
 }
 
 .item_list {
   width: 100%;
   float: left;
+  border-radius: 10px;
+  height: 5rem;
+  background-color: #f3c0866b;
 }
+
+
 
 .delete-btn {
   background-color: rgb(212, 50, 50);
   color: white;
 }
+
+#del-btn {
+  border: none;
+  background-color: #f8880800;
+  padding-top: 1.5rem;
+  padding-left: 5rem;
+}
+
 
 /*New event form*/
 .event-container {
