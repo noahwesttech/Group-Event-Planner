@@ -4,7 +4,11 @@
       <h4 class="event-title"><a
           class="link"
           href="/api/event/{{id}}"
-        >{{event_title}}</a></h4>
+        >{{event_title}}</a>
+        {{#if (is_equal user.id user_id)}}
+        <button type="click" class="btn btn-danger d-btn" data-id={{id}}>Delete Event</button>
+        {{/if}}
+        </h4>
       <div class="event-body">
         <div class="details-container row col-md-12">
         <p class="event-content col-md-6">
@@ -62,4 +66,7 @@
 
   </div>
 </div>
-<script src="../public/js/add-item.js"></script>
+<script src="/js/add-item.js"></script>
+{{#if (is_equal user.id user_id)}}
+<script src="/js/delete-event.js"></script>
+{{/if}}

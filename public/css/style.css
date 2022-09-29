@@ -205,6 +205,10 @@ button {
   padding-left: 5rem;
 }
 
+.d-btn {
+  float: right;
+  padding: .2rem;
+}
 
 /*New event form*/
 .event-container {

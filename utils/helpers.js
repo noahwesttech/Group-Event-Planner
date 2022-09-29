@@ -4,4 +4,9 @@ module.exports = {
       new Date(date).getMonth() + 1
     }/${new Date(date).getFullYear()}`;
   },
+  is_equal: (a, b) => {
+    if (a == b) {
+      return true;
+    }
+  },
 };
