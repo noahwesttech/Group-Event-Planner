@@ -85,8 +85,11 @@ router.post('/', withAuth, async (req, res) => {
     const newEvent = await Event.create({
       ...req.body,
       user_id: req.session.user_id,
-      user_id: req.body.user_id,
+      // user_id: req.body.user_id,
       event_title: req.body.event_title,
+      event_location: req.body.event_location,
+      event_date: req.body.event_date,
+      event_description: req.body.event_description,
       invite_emails: eventEmails,
     });
     console.log(req.body);
