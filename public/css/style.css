@@ -12,15 +12,19 @@ body {
 main {
   padding: 30px;
 }
+
+.header_nav {
+  height: 50px;
+}
 .header-top {
   position: relative;
-  z-index: 3;
+  z-index: -100;
   background-size: cover;
   background-image: url("../images/event.jpg");
   height: 200px;
   text-align: center;
-  -webkit-box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.67);
-  box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.67);
+  -webkit-box-shadow: 2px 2px 2px rgba(59, 59, 59, 0.67);
+  box-shadow: 2px 2px 2px rgba(59, 59, 59, 0.67);
 }
 
 h1 {
@@ -32,6 +36,17 @@ h1 {
   text-shadow: 1px 1px 3px #888787;
   color: #f18f55;
   margin: 20px auto;
+}
+
+.navbar-light .navbar-brand {
+  color: #f18f55;
+}
+
+.navbar-brand {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 2px 10px #bbb8b8;
+  color: #f18f55;
+  font-size: 35px;
 }
 
 .font-weight-bold {
@@ -90,10 +105,10 @@ button {
 
 /*home page*/
 .main_body {
-  padding: 100px 50px;
+  padding: 50px 50px;
   position: relative;
-  top: -120px;
-  z-index: -100;
+  top: -20px;
+  z-index: -1000;
   width: 90%;
   margin: auto;
 }
@@ -140,6 +155,7 @@ button {
 .event-guest {
   text-align: right;
   font-style: italic;
+  margin-right: 10px;
 }
 
 .event-username {
@@ -169,13 +185,13 @@ button {
 }
 
 .item-text {
-  padding: .5rem;
+  padding: 0.5rem;
   float: left;
-  width:fit-content;
+  width: fit-content;
 }
 
 .item-author {
-  padding: .5rem;
+  padding: 0.5rem;
   font-weight: bold;
   float: left;
   font-size: 12px;
@@ -192,8 +208,6 @@ button {
   margin: 1rem;
 }
 
-
-
 .delete-btn {
   background-color: rgb(212, 50, 50);
   color: white;
@@ -208,15 +222,15 @@ button {
 
 .d-btn {
   float: right;
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
 /*New event form*/
 .event-container {
   width: 80%;
   border-radius: 15px;
-  padding: 25px;
-  margin: 50px auto;
+  padding: 40px 25px;
+  margin: 20px auto;
   box-shadow: 1px 1px 6px 2px #888787;
 }
 
