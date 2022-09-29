@@ -5,6 +5,8 @@ const Item = require("./Item");
 
 User.hasMany(Event, {
   foreignKey: "user_id",
+  onDelete: 'CASCADE',
+  hooks: true,
 });
 
 Event.belongsTo(User, {
@@ -17,6 +19,8 @@ Item.belongsTo(Event, {
 
 Event.hasMany(Item, {
   foreignKey: "event_id",
+  onDelete: 'CASCADE',
+  hooks: true,
 });
 
 Item.belongsTo(User, {
@@ -25,6 +29,8 @@ Item.belongsTo(User, {
 
 User.hasMany(Item, {
     foreignKey: "user_id",
+    onDelete: 'CASCADE',
+    hooks: true,
 });
 
 module.exports = {

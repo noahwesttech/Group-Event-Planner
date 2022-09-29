@@ -123,6 +123,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(200).json(eventData);
   } catch (err) {
     res.status(500).json(err);
+    console.log('error:', err);
   }
 });
 
