@@ -6,32 +6,49 @@
           href="/api/event/{{id}}"
         >{{event_title}}</a></h4>
       <div class="event-body">
-        <p class="event-content">
+        <div class="details-container row col-md-12">
+        <p class="event-content col-md-6">
           Location:
           {{event_location}}
           <br />
           Description:
           {{event_description}}
         </p>
-        <span class="event-content">Items</span>
-        {{#each items as |item|}}
-          <div class="item_list">
-            <div class="card-text item-text">
-              {{item.item_name}}
-            </div>
-            <div class="item-author">
-              -{{item.user.username}}
-            </div>
-          </div>
-        {{/each}}
-
-        <p class="event-guest">
+        <p class="event-guest col-md-6">
           Created by
           <span class="event-username">{{user.username}}</span>
           on
           {{format_date createdAt}}
 
         </p>
+        </div>
+        <h5 class="event-content">Items</h5>
+        <div class="item-list-container">
+        {{#each items as |item|}}
+          <div class="item_list card col-md-2">
+            <div class="row">
+              <div class="card-text item-text col">
+              {{item.item_name}}
+              </div>
+              <div class="del-btn col">
+              <button id="del-btn" type="click"><i class="bi bi-x-circle"></i></button>
+            </div>
+           </div>
+            <div class="row">
+              <div class="item-author col">
+              -{{item.user.username}}
+            </div>
+            </div>
+          </div>
+        {{/each}}
+        </div>
+        {{!-- <p class="event-guest">
+          Created by
+          <span class="event-username">{{user.username}}</span>
+          on
+          {{format_date createdAt}}
+
+        </p> --}}
       </div>
     </div>
   </article>
