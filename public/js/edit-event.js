@@ -24,7 +24,10 @@ const editFormHandler = async (event) => {
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
-
+  console.log('title:', title);
+  console.log('id:', id);
+  console.log('description:', description);
+  console.log('emails:', inviteEmailsAsArray);
   const response = await fetch(`/api/event/${id}`, {
     method: "PUT",
     body: JSON.stringify({
@@ -41,12 +44,13 @@ const editFormHandler = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/home");
+    document.location.replace(`/api/event/${id}`);
   } else {
     alert(response.statusText);
+    console.log(response);
   }
 };
 
 document
-  .querySelector(".event-container")
-  .addEventListener("submit", editFormHandler);
+  .querySelector(".submit-btn")
+  .addEventListener("click", editFormHandler);

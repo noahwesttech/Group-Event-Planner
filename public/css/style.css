@@ -69,6 +69,7 @@ button {
   border: none;
   transition: background-color 0.5s, color 0.75s;
   justify-content: center;
+  margin: 1rem;
 }
 
 .submit-btn a {

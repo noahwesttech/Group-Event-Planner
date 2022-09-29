@@ -30,25 +30,32 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get('/my-events', withAuth, async (req, res) => {
+router.get('/event-edit/:id', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await Event.findByPk(req.params.id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Post }],
+      // include: [{ model: Post }],
+      include: [
+        {
+            model: User,
+            attributes: ['username', 'id'],
+        },
+      ],
     });
 
     const user = userData.get({ plain: true });
 
-    res.render('my-events', {
+    res.render('event-edit', {
       ...user,
       logged_in: true,
-      myEvents: true,
+      // myEvents: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 router.get('/event-setup', withAuth, async (req, res) => {
   try {

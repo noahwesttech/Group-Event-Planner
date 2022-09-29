@@ -1,5 +1,5 @@
 <div class="main_body card">
-  <h3 class="font-weight-bold">New Event</h3>
+  <h3 class="font-weight-bold">Edit Event</h3>
 
   <div class="event-container">
     <form class="w-100 pb-4 event_new_form">
@@ -22,7 +22,7 @@
         <div class="col-sm-3">
           <label for="event-date">Date</label>
         </div>
-        <input type="date" id="event-date" name="event-date" class="col-sm-9 form-control" value="{{event_date}}"" />
+        <input type="date" id="event-date" name="event-date" class="col-sm-9 form-control" value="{{format_new_date event_date}}" />
       </div>
 
       <div class="form-group row w-100">
@@ -30,7 +30,7 @@
           <label for="event_desc">Description</label>
         </div>
         <textarea
-          type="text" id="event-desc" name="event-desc" class="col-sm-9 form-control" value="{{event_description}">
+          type="text" id="event-desc" name="event-desc" class="col-sm-9 form-control" value="{{event_description}}">{{event_description}}
         </textarea>
       </div>
 
@@ -39,7 +39,7 @@
           <label for="invite-email">Invitee Emails</label>
         </div>
 
-        <input type="text" id="invite-email" name="invite-email" class="col-sm-9 form-control" value="{{invite_email}}" />
+        <input type="text" id="invite-email" name="invite-email" class="col-sm-9 form-control" value="{{invite_emails}}" />
       </div>
 
       <div class="mt-1">
@@ -54,7 +54,7 @@
           type="submit"
           class="submit-btn pl-3 pr-3 pt-2 pb-2 mb-4"
           id="submit-btn"
-        >Create Event</button>
+        >Edit Event</button>
       </div>
 
       {{! </section> }}
@@ -62,4 +62,4 @@
   </div>
 </div>
 
-<script src="/js/setup.js"></script>
+<script src="/js/edit-event.js"></script>
