@@ -5,6 +5,7 @@ const eventdata = [
     event_title: "Birthday Party",
     event_location: "123 Main Street",
     event_description: "Birthday Party",
+    event_date: 10/10/2022,
     user_id: 1,
     invite_emails: [
       "test1@test.com", 
@@ -17,6 +18,7 @@ const eventdata = [
     event_title: "Baby Shower",
     event_location: "123 Sesame Street",
     event_description: "Baby Shower",
+    event_date: 10/10/2022,
     user_id: 2,
     invite_emails: [
       "test10@test.com",
@@ -29,6 +31,7 @@ const eventdata = [
     event_title: "Retirement Party",
     event_location: "123 Elm Street",
     event_description: "Retirement Party",
+    event_date: 10/10/2022,
     user_id: 3,
     invite_emails: [
       "test20@test.com",
@@ -41,6 +44,7 @@ const eventdata = [
     event_title: "Bachelor Party",
     event_location: "123 Party Street",
     event_description: "Bachelor Party",
+    event_date: 10/10/2022,
     user_id: 4,
     invite_emails: [
       "test30@test.com",
@@ -53,6 +57,7 @@ const eventdata = [
     event_title: "Hike",
     event_location: "123 Trail Street",
     event_description: "Hike",
+    event_date: 10/10/2022,
     user_id: 5,
     invite_emails: [
       "test40@test.com",

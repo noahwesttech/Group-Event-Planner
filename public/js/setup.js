@@ -4,7 +4,6 @@ const newEventFormHandler = async (event) => {
   const title = document.querySelector("#event-input").value.trim();
   const date = document.querySelector("#event-date").value.trim();
   const location = document.querySelector("#event-location").value.trim();
-
   const description = document.querySelector("#event-desc").value.trim();
 
 
@@ -21,9 +20,9 @@ const newEventFormHandler = async (event) => {
     inviteEmailsAsArray = inviteEmailsAsString.split(" ");
   }
 
-  if (title > 0 && inviteEmailsAsArray.length > 0) {
-    const response = await fetch("/api/events", {
-      method: "post",
+  if (title && inviteEmailsAsArray.length > 0) {
+    const response = await fetch("/api/event", {
+      method: "POST",
       body: JSON.stringify({
 
         event_title: title,
@@ -49,5 +48,5 @@ const newEventFormHandler = async (event) => {
 };
 
 document
-  .getElementById("event_new_form")
-  .addEventListener("submit", newEventFormHandler);
+  .getElementById("submit-btn")
+  .addEventListener("click", newEventFormHandler);
