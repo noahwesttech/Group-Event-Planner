@@ -1,27 +1,33 @@
-<div class="form-container" data-id={{event_id}}>
-  <form class="w-100 pb-4 item_form" data-id={{event_id}}>
-    <div class="form-group row w-100">
-      <div class="col-sm-3">
-        <label for="item_text">Add Item</label>
+<div class="main_body card">
+  <h3 class="font-weight-bold">New Item</h3>
+  <div class="form-container" data-id={{event_id}}>
+    <form class="w-100 pb-4 item_form" data-id={{event_id}}>
+      <div class="form-group row w-100">
+        <div class="col-sm-4">
+          <label for="item_text">Add Item</label>
+        </div>
+        <input
+          type="text"
+          id="item_text"
+          name="item_text"
+          class="col-sm-8 form-control"
+        />
       </div>
-      <input
-        type="text"
-        id="item_text"
-        name="item_text"
-        class="col-sm-9 form-control"
-      />
-    </div>
 
-    <div class="form-group row" data-id={{event_id}}>
-      <div class="col-sm-12 d-flex justify-content-center" data-id={{event_id}}>
-        <button
-          type="submit"
-          class="w-50 mt-3 submit-btn"
+      <div class="form-group row" data-id={{event_id}}>
+        <div
+          class="col-sm-12 d-flex justify-content-center"
           data-id={{event_id}}
-        >submit</button>
+        >
+          <button
+            type="submit"
+            class="w-25 mt-3 submit-btn"
+            data-id={{event_id}}
+          >submit</button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
 
 <script src="/js/add-item.js"></script>
