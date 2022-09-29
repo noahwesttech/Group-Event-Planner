@@ -26,7 +26,7 @@ const sendInviteEmails = async (
         to: eventEmails[i],
         from: "mike.lumivent@gmail.com",
         subject: eventTitle,
-        text: `You've been invited to an event at ${eventLocation} on ${eventDate}.  Please click this link to let us know your availability.  ${port}/event/${newEventId}`,
+        text: `You've been invited to an event at ${eventLocation} on ${eventDate}.  Please click this link to let us know your availability.  ${port}/api/event/${newEventId}`,
       };
       sgMail
         .send(msg)
