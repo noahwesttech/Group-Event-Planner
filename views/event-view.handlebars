@@ -12,11 +12,11 @@
             data-id={{id}}
           >
           
-          <i class="bi bi-trash"></i>
+          <i class="bi bi-trash" data-id={{id}}></i>
       
           </button>
             <button type="submit" class="btn btn-secondary d-btn mr-2"  data-id={{id}}>
-        <a class="link" href="/event-edit/{{id}}">  <i class="bi bi-pencil-square">  </i></a>
+        <a class="link" href="/event-edit/{{id}}">  <i class="bi bi-pencil-square" data-id={{id}}>  </i></a>
       </button>
         {{/if}}
       </h4>
