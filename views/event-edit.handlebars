@@ -8,33 +8,30 @@
         <div class="col-sm-3">
           <label for="event-input">Event Name</label>
         </div>
-        <input type="text" id="event-input" class="col-sm-9 form-control" value="{{event_title}}"/>
+        <input type="text" id="event-input" name="event-input" class="col-sm-9 form-control" value="{{event_title}}"/>
       </div>
 
       <div class="form-group row w-100">
         <div class="col-sm-3">
           <label for="event-location">Location</label>
         </div>
-        <input type="text" id="event-location" class="col-sm-9 form-control" value="{{event_location}}" />
+        <input type="text" id="event-location" name="event-location" class="col-sm-9 form-control" value="{{event_location}}" />
       </div>
 
       <div class="form-group row w-100">
         <div class="col-sm-3">
           <label for="event-date">Date</label>
         </div>
-        <input type="date" id="event-date" class="col-sm-9 form-control" value="{{event_date}}"" />
+        <input type="date" id="event-date" name="event-date" class="col-sm-9 form-control" value="{{event_date}}"" />
       </div>
 
       <div class="form-group row w-100">
         <div class="col-sm-3">
-
           <label for="event_desc">Description</label>
         </div>
         <textarea
-          type="text"
-          id="event-desc"
-          class="col-sm-9 form-control" value="{{event_description}}"
-        ></textarea>
+          type="text" id="event-desc" name="event-desc" class="col-sm-9 form-control" value="{{event_description}">
+        </textarea>
       </div>
 
       <div class="form-group row w-100">
@@ -42,7 +39,7 @@
           <label for="invite-email">Invitee Emails</label>
         </div>
 
-        <input type="text" id="invite-email" class="col-sm-9 form-control" value="{{invite_email}}" />
+        <input type="text" id="invite-email" name="invite-email" class="col-sm-9 form-control" value="{{invite_email}}" />
       </div>
 
       <div class="mt-1">
