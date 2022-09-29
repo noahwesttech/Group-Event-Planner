@@ -7,12 +7,13 @@
         >{{event_title}}</a></h4>
       <div class="event-body">
         <p class="event-content">
-          Created by
-          <span class="event-username">{{user.username}}</span>
-          on
-          {{format_date createdAt}}
-
+          Location:
+          {{event_location}}
+          <br />
+          Description:
+          {{event_description}}
         </p>
+        <span class="event-content">Items</span>
         {{#each items as |item|}}
           <div class="item_list">
             <div class="card-text item-text">
@@ -24,6 +25,13 @@
           </div>
         {{/each}}
 
+        <p class="event-guest">
+          Created by
+          <span class="event-username">{{user.username}}</span>
+          on
+          {{format_date createdAt}}
+
+        </p>
       </div>
     </div>
   </article>
