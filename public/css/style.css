@@ -181,6 +181,7 @@ button {
 
 .item-list-container {
   display: flex;
+  padding: 10px;
 }
 
 .item-button {

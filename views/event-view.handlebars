@@ -31,9 +31,9 @@
           </p>
         </div>
         <h5 class="event-content">Items</h5>
-        <div class="item-list-container">
+        <div class="item-list-container row">
           {{#each items as |item|}}
-            <div class="item_list card col-md-2">
+            <div class="item_list card col-md-2 col-xs-6 col-sm-3">
               {{#if (is_equal user.id ../userId)}}
               <div class="row">
                 <div class="del-btn col">

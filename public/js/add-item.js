@@ -3,7 +3,6 @@ const newFormHandler = async (event) => {
 
   const item = document.querySelector('input[name="item_text"]').value;
 
-
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
     const response = await fetch(`/api/item/${id}`, {
@@ -16,14 +15,13 @@ const newFormHandler = async (event) => {
       },
     });
 
-
     if (response.ok) {
       document.location.replace(`/api/event/${id}`);
     } else {
       alert(response.statusText);
     }
   } else {
-    console.log('No data-id');
+    console.log("No data-id");
   }
 };
 
