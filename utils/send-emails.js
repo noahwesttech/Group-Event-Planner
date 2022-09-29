@@ -15,7 +15,7 @@ const sendInviteEmails = async (
   let port;
 
   if (process.env.JAWSDB_URL) {
-    port = "https://lumivent.herokuapp.com/login";
+    port = "https://lumivent.herokuapp.com/";
   } else {
     port = "http://localhost:3001";
   }
