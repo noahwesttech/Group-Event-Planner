@@ -70,12 +70,18 @@ router.get('/:id', withAuth, async (req, res) => {
 router.put('/:id',  withAuth, async (req, res) => {
   try {
     const updatedEvent = await Event.update(
-      { event_title: req.body.event_title },
+      { event_title: req.body.event_title,
+        event_date: req.body.event_date,
+        event_location: req.body.event_location,
+        event_description: req.body.event_description,
+        invite_emails: req.body.invite_emails,
+       },
       { where: { id: req.params.id } }
     );
     res.status(200).json(updatedEvent);
   } catch (err) {
     res.status(400).json(err);
+    console.log(err);
   }
 });
 

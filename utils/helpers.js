@@ -13,5 +13,9 @@ module.exports = {
     if (a > 0) {
       return true;
     }
+  },
+  format_new_date: (date) => {
+    let newDate = new Date(date);
+    return `${newDate.toLocaleString("default", {year: "numeric"})}-${newDate.toLocaleString("default", { month: "2-digit" })}-${newDate.toLocaleString("default", { day: "2-digit" })}`
   }
 };
