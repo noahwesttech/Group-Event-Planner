@@ -245,6 +245,13 @@ button {
   float: left !important;
 }
 
+.btn a {
+  color: white;
+}
+
+.btn a:visited {
+  color: white;
+}
 footer {
   width: 100%;
   background-color: lightgrey;
