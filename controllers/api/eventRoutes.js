@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Event, Item } = require("../../models");
 const withAuth = require('../../utils/auth');
+const { sendInviteEmails } = require("../../utils/send-emails");
 
 // /api/event/ routes
 
@@ -81,6 +82,9 @@ router.put('/:id',  withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     const eventEmails = req.body.invite_emails;
+    const eventTitle = req.body.event_title;
+    const eventDate = req.body.event_date;
+    const eventLocation = req.body.event_location;
     
     const newEvent = await Event.create({
       ...req.body,
@@ -92,7 +96,9 @@ router.post('/', withAuth, async (req, res) => {
       event_description: req.body.event_description,
       invite_emails: eventEmails,
     });
-    console.log(req.body);
+    const newEventId = newEvent.id;
+    sendInviteEmails(eventEmails, eventTitle, eventDate, eventLocation, newEventId);
+    // console.log(req.body);
     res.status(200).json(newEvent);
   } catch (err) {
     res.status(400).json(err);
