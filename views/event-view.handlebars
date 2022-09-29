@@ -34,16 +34,19 @@
         <div class="item-list-container">
           {{#each items as |item|}}
             <div class="item_list card col-md-2">
+              {{#if (is_equal user.id ../userId)}}
               <div class="row">
-                <div class="card-text item-text col">
-                  {{item.item_name}}
-                </div>
-                {{#if (is_equal user.id ../userId)}}
                 <div class="del-btn col">
                   <button id="del-btn" href="#">
                     <i class="bi bi-x-circle" data-id={{id}} user-id={{user_id}}></i></button>
                 </div>
+              </div>
                 {{/if}}
+              <div class="row">
+                <div class="card-text item-text col">
+                  {{item.item_name}}
+                </div>
+                
               </div>
               <div class="row">
                 <div class="item-author col">

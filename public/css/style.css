@@ -75,6 +75,9 @@ button {
   color: white;
 }
 
+.submit-btn:focus-visible {
+  outline: none;
+}
 .submit-btn:hover {
   color: white;
   background-color: #ce7d4f;
@@ -216,8 +219,9 @@ button {
 #del-btn {
   border: none;
   background-color: #f8880800;
-  padding-top: 1.5rem;
-  padding-left: 5rem;
+  float: right;
+  margin-right: -20px;
+  height: 10px;
 }
 
 .d-btn {
@@ -247,6 +251,14 @@ footer {
   text-align: center;
   font-size: 12px;
   padding: 5px;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 1385px) {
