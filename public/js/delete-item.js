@@ -1,27 +1,26 @@
 const deleteFormHandler = async (event) => {
   event.preventDefault();
 
-  const id = window.location.toString().split("/")[
+  const eventId = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
 
-  const response = await fetch(`/api/item/${id}`, {
-    method: "DELETE",
-    body: JSON.stringify({
-      event_id: id,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+    const response = await fetch(`/api/item/${id}`, {
+      method: "DELETE",
   });
 
   if (response.ok) {
-    document.location.replace("/home");
+    document.location.replace(`/api/event/${eventId}`);
   } else {
     alert(response.statusText);
+  }
+  } else {
+    console.log('No data-id');
   }
 };
 
 document
-  .querySelector(".delete-btn")
+  .querySelector(".del-btn")
   .addEventListener("click", deleteFormHandler);

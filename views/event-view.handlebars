@@ -5,7 +5,7 @@
           class="link"
           href="/api/event/{{id}}"
         >{{event_title}}</a>
-        {{#if (is_equal user.id user_id)}}
+        {{#if (is_equal user.id userId)}}
           <button
             type="click"
             class="btn btn-danger d-btn"
@@ -38,10 +38,12 @@
                 <div class="card-text item-text col">
                   {{item.item_name}}
                 </div>
+                {{#if (is_equal user.id ../userId)}}
                 <div class="del-btn col">
-                  <a id="del-btn" href="#">
-                    <i class="bi bi-x-circle"></i></a>
+                  <button id="del-btn" href="#">
+                    <i class="bi bi-x-circle" data-id={{id}} user-id={{user_id}}></i></button>
                 </div>
+                {{/if}}
               </div>
               <div class="row">
                 <div class="item-author col">
@@ -68,10 +70,13 @@
         <a class="link" href="/api/item/{{id}}">+ new item</a>
       </button>
     </div>
-
   </div>
 </div>
 <script src="/js/add-item.js"></script>
-{{#if (is_equal user.id user_id)}}
+{{#if (is_equal user.id userId)}}
   <script src="/js/delete-event.js"></script>
+{{/if}}
+
+{{#if (is_greater items_length)}}
+  <script src="/js/delete-item.js"></script>
 {{/if}}
